@@ -1,0 +1,29 @@
+#server:
+#  port: 8080
+#
+#spring:
+#  sharding-sphere:
+#    datasource:
+#      names: ds0,ds1
+#      ds0:
+#        type: com.zaxxer.hikari.HikariDataSource
+#        driver-class-name: com.mysql.cj.jdbc.Driver
+#        jdbc-url: jdbc:mysql://localhost:3306/test0?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+#        username: root
+#        password: yhjaicly
+#      ds1:
+#        type: com.zaxxer.hikari.HikariDataSource
+#        driver-class-name: com.mysql.cj.jdbc.Driver
+#        jdbc-url: jdbc:mysql://localhost:3306/test1?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+#        username: root
+#        password: yhjaicly
+#    sharding:
+#      tables:
+#        tb_userInfo:
+#          database-strategy:
+#            inline:
+#              sharding-column: id
+#              algorithm-expression: ds$->{id % 2}
+#          key-generator:
+#            column: id
+#            type: SNOWFLAKE
