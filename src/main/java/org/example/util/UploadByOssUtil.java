@@ -13,9 +13,9 @@ import java.io.IOException;
 public class UploadByOssUtil {
     
     private static String endpoint = "https://oss-cn-shanghai.aliyuncs.com";
-    private static String accessKeyId = "LTAI5tE1thyNdeMSnuBcHr1j";
-    private static String accessKeySecret = "5MVlHyZjPs8mrB7KWiIzgs0n2D0dt4";
-    private static String bucketName = "yhj980325";
+    private static String accessKeyId = "";
+    private static String accessKeySecret = "";
+    private static String bucketName = "";
     
     public static String upload(MultipartFile file) throws IOException {
         /*
